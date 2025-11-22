@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>4FC</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Bytesized&family=Marmelad&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      .miur {
+        background: #0000ff;
+        padding: 16px 0 16px 32px;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .menu {
+        display: flex;
+        margin-top: 16px;
+      }
+
+      .intestazione {
+        display: flex;
+        margin-left: 32px;
+        align-items: center;
+      }
+
+      .intestazione .titolo {
+        margin-left: 32px;
+        font-family: "Bytesized";
+        font-size: 32px;
+        color: blueviolet;
+      }
+
+      .kebab {
+        margin-left: 16px;
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .menu .kebab .point {
+        width: 16px;
+        height: 16px;
+        background: #ca97e0;
+        border-radius: 16px;
+      }
+
+      #menuAperto {
+        display: none;
+      }
+
+      #menuAperto.open {
+        display: flex;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const kebab = document.getElementById("kebab");
+        const menu = document.getElementById("menuAperto");
+
+        kebab.addEventListener("click", () => {
+          menu.classList.toggle("open");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="miur">
+      <img src="image.png" alt="miur" />
+    </div>
+    <div class="menu">
+      <div class="kebab" id="kebab">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
+      </div>
+
+      <div class="intestazione">
+        <div class="logo">
+          <img src="logo.png" alt="" />
+        </div>
+
+        <div class="titolo">Giordano Bruno</div>
+      </div>
+    </div>
+
+    <div id="menuAperto">
+      <ul>
+        <li>asd</li>
+        <li>asd</li>
+        <li>asd</li>
+        <li>asd</li>
+      </ul>
+    </div>
+  </body>
+</html>
